@@ -14,7 +14,7 @@ function getStyle(e){
 
 size.forEach(div => div.addEventListener("mouseover", getStyle))
 
-let btn = document.querySelector('button')
+let btn = document.querySelector('.button')
 
 btn.addEventListener('click', clear)
 
@@ -38,3 +38,35 @@ getSize.addEventListener('keydown', function(e){
         clear()
     }
 })
+
+let eraser = document.querySelector('.eraser')
+
+eraser.addEventListener('click', erase)
+
+function erase(){
+    size.forEach(div => div.addEventListener("mouseover", function getStyle(e){
+        this.classList.remove('blackBackground')
+    }))
+}
+
+//click mode coming soon
+
+let clickMode = document.querySelector('.clickMode')
+
+clickMode.addEventListener('click', click)
+
+function click(){
+    size.forEach(div => div.addEventListener("click", function(){
+        this.classList.add('blackBackground')
+    }))
+}
+
+let blackMode = document.querySelector('.blackMode')
+
+blackMode.addEventListener('click', black)
+
+function black(){
+    size.forEach(div => div.addEventListener("mouseover", function(){
+        this.classList.add('blackBackground')
+    }))
+}
