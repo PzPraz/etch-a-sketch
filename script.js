@@ -14,6 +14,27 @@ function getStyle(e){
 
 size.forEach(div => div.addEventListener("mouseover", getStyle))
 
+let btn = document.querySelector('button')
+
+btn.addEventListener('click', clear)
+
 function clear(){
-    size.forEach(div => div.classList.remove('blackBackground'))
+    for(let i = 0; i < container.childElementCount; i++){
+        size[i].classList.remove('blackBackground')
+    }
 }
+
+function calculateSize(a){
+    if(a > 100){alert('invalid');}
+    container.style.gridTemplateColumns = `repeat(${a}, 1fr)`
+    container.style.gridTemplateRows = `repeat(${a}, 1fr)`
+}
+;
+let getSize = document.querySelector('.getSize')
+
+getSize.addEventListener('keydown', function(e){
+    if(e.keyCode == 13){
+        calculateSize(getSize.value)
+        clear()
+    }
+})

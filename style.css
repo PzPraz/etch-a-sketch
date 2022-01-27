@@ -1,30 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Roboto:wght@300;500;900&display=swap');
+
 html{
     height: 100%;
 }
 
 body{
     display:flex;
+    flex-direction: row-reverse;
     height:100%;
     width: 100%;
     margin: 0;
     justify-content: center;
     align-items: center;
+    background-color: #eef2f7;
+}
+
+.content{
+    display:flex;
+    flex-direction: row-reverse;
+    gap: 50px
 }
 
 .container{
     width: 500px;
     height: 500px;
     box-sizing: border-box;
-    border: 1px solid red;
     display:grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows:repeat(16, 1fr);
+    box-shadow: 0 0 1em 0 black;
+    background: rgba(255, 255, 255, 0.735);
 }
 
 .size{
     box-sizing: border-box;
-    width:31.25px;
-    height:31.25px;
 }
 
 .blackBackground{
@@ -32,6 +41,24 @@ body{
 }
 
 button{
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+    opacity: 1;
+    background-color: #eef2f7;
+    transition: 0.4s ease-in-out;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+.leftSide{
+    display:flex;
+    flex-direction: column;
+    gap:30px;   
 }
