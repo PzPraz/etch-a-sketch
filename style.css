@@ -1,0 +1,37 @@
+html{
+    height: 100%;
+}
+
+body{
+    display:flex;
+    height:100%;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    display:grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows:repeat(16, 1fr);
+}
+
+.size{
+    box-sizing: border-box;
+    width:31.25px;
+    height:31.25px;
+}
+
+.blackBackground{
+    background-color: black;
+}
+
+button{
+    width: 70px;
+    height: 70px;
+}
